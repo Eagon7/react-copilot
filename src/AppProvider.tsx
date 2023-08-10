@@ -20,7 +20,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({
     </AppContext.Provider>
   );
 };
-
+// reducer 提供修改方法
 export function reducer(
   state: AppContext,
   action: { type: string; payload: any }
@@ -30,7 +30,7 @@ export function reducer(
       return state;
   }
 }
-
+// 方便使用
 export function useAppState() {
   const state = useContext(AppContext);
   return state;
