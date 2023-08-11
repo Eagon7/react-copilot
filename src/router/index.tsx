@@ -1,8 +1,7 @@
-import { RouteObject, useRoutes } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 
-import Login from "../pages/Login";
-
-import { CustomRoute, ImportModuleType } from "../types";
+import Layouts from "../layouts";
+import { CustomRoute } from "../types";
 
 const autoImport = import.meta.globEager("./modules/*.tsx") as Record<
   string,
@@ -15,14 +14,7 @@ Object.keys(autoImport).forEach((item: string) => {
   });
 });
 
-const RouterArray: CustomRoute[] = [
-  {
-    path: "/",
-    element: <Login />,
-    meta: {},
-  },
-  ...ImportArray,
-];
+const RouterArray: CustomRoute[] = [...ImportArray];
 
 console.log(RouterArray);
 const Router = () => {

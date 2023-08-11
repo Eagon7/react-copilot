@@ -1,9 +1,19 @@
-import * as Dash from "../../pages/Dashboard";
-
+import Layouts from "../../layouts";
+import SuspenceAnt from "../utils/SuspenceAnt";
+import React from "react";
 const Dashboard = [
   {
-    path: "/dashboard",
-    element: <Dash.default />,
+    element: <Layouts />,
+    children: [
+      {
+        path: "/dashboard",
+        element: SuspenceAnt(React.lazy(() => import("../../pages/Dashboard"))),
+      },
+      {
+        path: "/Bt",
+        element: SuspenceAnt(React.lazy(() => import("../../pages/Bt"))),
+      },
+    ],
   },
 ];
 
