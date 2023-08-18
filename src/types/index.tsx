@@ -51,3 +51,8 @@ export interface ThemeConfigProp {
   primary: string;
   isDark: boolean;
 }
+
+export type AppDispatch = React.Dispatch<{
+  type: string;
+  payload: any;
+}> | null;

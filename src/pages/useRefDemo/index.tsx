@@ -1,18 +1,16 @@
 import { useRef, useState } from "react";
+import { useAppDispatch, useAppState } from "../../AppProvider";
 
 const useRefDemo = () => {
-  const a = useRef(1);
-  const [state, setState] = useState(1);
-
-  const addRef = () => {
-    a.current = a.current + 1;
+  const dispatch = useAppDispatch();
+  const state = useAppState();
+  const handleTheme = () => {
+    if (dispatch) dispatch({ type: "changeTheme", payload: true });
   };
-
+  console.log(state);
   return (
     <div>
-      {state}
-      <button onClick={() => setState((a.current = a.current + 1))}>a+</button>
-      <button onClick={() => setState(state + 1)}>++</button>
+      <button onClick={handleTheme}>theme</button>
     </div>
   );
 };
