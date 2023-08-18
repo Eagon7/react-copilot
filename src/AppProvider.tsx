@@ -4,7 +4,7 @@ import { createContext, useContext, ReactNode, useReducer } from "react";
 const AppContext = createContext<{ [key: string]: any } | null>(null);
 const AppDispatch = createContext<{ [key: string]: any } | null>(null);
 
-const initialState: AppContext = {
+const initialState = {
   theme: "light",
 }; // 初始状态
 
@@ -21,10 +21,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({
   );
 };
 // reducer 提供修改方法
-export function reducer(
-  state: AppContext,
-  action: { type: string; payload: any }
-) {
+export function reducer(state: any, action: { type: string; payload: any }) {
   switch (action.type) {
     default:
       return state;

@@ -35,11 +35,12 @@ const items: MenuProps["items"] = [
       [getItem("Option 1", "/bt"), getItem("Option 2", "dashboard")],
       "group"
     ),
+
     getItem(
-      "Item 2",
+      "useRefDemo",
       "g2",
       null,
-      [getItem("Option 3", "3"), getItem("Option 4", "4")],
+      [getItem("useRefDemo", "/ref"), getItem("Option 4", "4")],
       "group"
     ),
   ]),

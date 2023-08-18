@@ -46,3 +46,8 @@ export type CustomRoute = CustomRouteObject | NonCustomRouteObject;
 type ImportModule = {
   [key: string]: Promise<any>;
 };
+
+export interface ThemeConfigProp {
+  primary: string;
+  isDark: boolean;
+}

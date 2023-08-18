@@ -13,6 +13,12 @@ const Dashboard = [
         path: "/Bt",
         element: SuspenceAnt(React.lazy(() => import("../../pages/Bt"))),
       },
+      {
+        path: "/ref",
+        element: SuspenceAnt(
+          React.lazy(() => import("../../pages/useRefDemo/"))
+        ),
+      },
     ],
   },
 ];
