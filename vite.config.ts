@@ -7,4 +7,10 @@ export default defineConfig({
   server: {
     port: 3333,
   },
+  // 配置别名
+  resolve: {
+    alias: {
+      "@": "/src",
+    },
+  },
 });
